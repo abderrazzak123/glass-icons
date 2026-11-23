@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glass Icons — حزمة أيقونات زجاجية</title>
+<meta name="description" content="حزمة أيقونات زجاجية مصنفرة بألوان أصلية وشكل مدور بحال سامسونغ. تحميل مباشر.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #2a0a45 0%, #5b1570 45%, #a02a8f 100%);
+    color: #fff; min-height: 100vh; padding: 32px 16px 48px;
+  }
+  header { text-align: center; max-width: 640px; margin: 0 auto 28px; }
+  h1 { font-size: 2rem; margin-bottom: 8px; }
+  p.sub { opacity: .85; line-height: 1.7; }
+  .dl {
+    display: inline-block; margin-top: 20px; padding: 14px 34px;
+    background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.35);
+    border-radius: 999px; color: #fff; text-decoration: none; font-weight: 700;
+    backdrop-filter: blur(8px); font-size: 1.05rem;
+  }
+  .dl:active { background: rgba(255,255,255,.28); }
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+    gap: 22px 14px; max-width: 760px; margin: 0 auto;
+  }
+  figure { text-align: center; }
+  figure img { width: 84px; height: 84px; }
+  figcaption { margin-top: 6px; font-size: .8rem; opacity: .9; }
+  footer { text-align: center; margin-top: 36px; opacity: .7; font-size: .85rem; line-height: 1.8; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Glass Icons</h1>
+  <p class="sub">حزمة أيقونات زجاجية مصنفرة، بألوان أصلية واضحة وشكل مدور بحال أيقونات سامسونغ. الخلفية ديالك كتبان من الزجاج ملونة.</p>
+  <a class="dl" href="glass-icons-v1.zip" download>⬇ تحميل الحزمة كاملة (19 أيقونة)</a>
+</header>
+<main class="grid" id="grid"></main>
+<footer>
+  <p>التطبيق: فك الضغط، ودخل لـTheme Park من Good Lock، صايب حزمة أيقونات واختار هاد التصاور.</p>
+</footer>
+<script>
+  const apps = [
+    ["whatsapp","WhatsApp"],["instagram","Instagram"],["facebook","Facebook"],
+    ["youtube","YouTube"],["telegram","Telegram"],["spotify","Spotify"],
+    ["tiktok","TikTok"],["x","X"],["googlechrome","Chrome"],["gmail","Gmail"],
+    ["googlemaps","Maps"],["netflix","Netflix"],["snapchat","Snapchat"],
+    ["discord","Discord"],["twitch","Twitch"],["reddit","Reddit"],
+    ["pinterest","Pinterest"],["messenger","Messenger"],["viber","Viber"]
+  ];
+  document.getElementById("grid").innerHTML = apps.map(([slug,name]) =>
+    `<figure><img src="icons/${slug}.png" alt="${name}" loading="lazy"><figcaption>${name}</figcaption></figure>`
+  ).join("");
+</script>
+</body>
+</html>
